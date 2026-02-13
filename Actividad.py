@@ -1,4 +1,4 @@
-def show_Menu():
+def show_menu():
     print("Choose one option you want")
     print("1.Record a purchase")
     print("2.Calculate the points obtained")
@@ -11,7 +11,7 @@ print("\n Welcome to the points system")
 client = input("name of client: ")
 print("Hello",client,"¿what do you want to do?")
 
-def record_Purchase():
+def record_purchase():
     print("\n-------Record purchase--------")
 
     purchase_name = input("Enter the purchase's name:")
@@ -41,6 +41,7 @@ while not exit_program:
 
     if election == 1:
         points = record_Purchase()
+        print("purchase successfully registered")
         total_points += points
     elif election ==2:
         print("Calculateing the points obtained")
