@@ -21,6 +21,7 @@ def record_purchase():
             print("The value must be greater than zero.")
             return 0
         points_earned = int(purchase_value // 1000)
+        print("purchase successfully registered")
         print(f"You earned {points_earned} points.")
         return points_earned
     except ValueError:
@@ -32,7 +33,7 @@ exit_program = False
 
 while not exit_program:
 
-    show_Menu()
+    show_menu()
     try:
         election = int(input("Enter the option you want:"))
     except ValueError:
@@ -40,8 +41,7 @@ while not exit_program:
         continue
 
     if election == 1:
-        points = record_Purchase()
-        print("purchase successfully registered")
+        points = record_purchase()
         total_points += points
     elif election ==2:
         print("Calculateing the points obtained")
